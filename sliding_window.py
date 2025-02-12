@@ -12,17 +12,17 @@ Used in this problem
 
 
 
-def lengthOfLongestSubstring(s):
-    char_set = set()  # HashSet to store unique characters
-    l = 0  # Left pointer
-    max_length = 0  # To store the max length of unique substring
+def slidngWindow(s):
+    seen = set()  # Store unique characters
+    left = 0  # Left pointer
+    max_length = 0  # Keep track of max substring length
 
-    for r in range(len(s)):  # Right pointer moves through s
-        while s[r] in char_set:  # If duplicate found
-            char_set.remove(s[l])  # Remove leftmost character
-            l += 1  # Move left pointer right
+    for right in range(len(s)):  # Right pointer moves through the string
+        while s[right] in seen:  # If duplicate found, shrink window
+            seen.remove(s[left])
+            left += 1
         
-        char_set.add(s[r])  # Add the new character to the set
-        max_length = max(max_length, r - l + 1)  # Update max length
+        seen.add(s[right])  # Add current character
+        max_length = max(max_length, right - left + 1)  # Update max length
 
     return max_length
