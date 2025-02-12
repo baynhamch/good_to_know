@@ -1,3 +1,8 @@
+"""
+The Sliding Window technique is a way to efficiently process problems that involve subarrays or substrings by moving two pointers (left and right) dynamically instead of checking all possible substrings (which would be slow).
+"""
+
+
 def lengthOfLongestSubstring(s):
     char_set = set()  # HashSet to store unique characters
     l = 0  # Left pointer
