@@ -44,7 +44,7 @@ public class Sorting {
         return A;
     }
         public static void main(String[] args) {
-    // Sorting sorting = new Sorting();
+
     int[] myArray = {2, 45, 37, 21, 31, 50, 29, 22, 67, 88, 56};
     System.out.println(myArray);
 
