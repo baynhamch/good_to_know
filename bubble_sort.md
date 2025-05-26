@@ -1,5 +1,6 @@
+#Bubble Sort Algorithm
 
-
+## Python
 ```Python
 def bubblesort(A):
     for i in range(len(A) - 1):
@@ -15,6 +16,7 @@ bubblesort(A)
 print(A)
 ```
 
+## Java
 ``` java
 public class Sorting {
 
